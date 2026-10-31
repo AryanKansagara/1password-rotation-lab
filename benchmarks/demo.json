@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "provenance": "observed loopback HTTP with fictional tokens",
+  "vendorIntegration": false,
+  "immediate": {
+    "probes": [
+      {
+        "consumer": "api",
+        "generation": 1,
+        "authenticatedIdentity": "api",
+        "accepted": false,
+        "observedAt": 1793475856713
+      },
+      {
+        "consumer": "worker",
+        "generation": 1,
+        "authenticatedIdentity": "worker",
+        "accepted": false,
+        "observedAt": 1793475856714
+      },
+      {
+        "consumer": "scheduler",
+        "generation": 1,
+        "authenticatedIdentity": "scheduler",
+        "accepted": false,
+        "observedAt": 1793475856716
+      }
+    ],
+    "attempts": 3,
+    "rejected": 3
+  },
+  "staged": {
+    "cached": {
+      "decision": "unsafe",
+      "checks": [
+        {
+          "consumer": "api",
+          "status": "ready",
+          "reason": "fresh target-generation authentication"
+        },
+        {
+          "consumer": "worker",
+          "status": "ready",
+          "reason": "fresh target-generation authentication"
+        },
+        {
+          "consumer": "scheduler",
+          "status": "unsafe",
+          "reason": "consumer has not authenticated with target generation"
+        }
+      ],
+      "scope": "declared consumers only; not a complete dependency oracle"
+    },
+    "missing": {
+      "decision": "unknown",
+      "checks": [
+        {
+          "consumer": "api",
+          "status": "ready",
+          "reason": "fresh target-generation authentication"
+        },
+        {
+          "consumer": "worker",
+          "status": "ready",
+          "reason": "fresh target-generation authentication"
+        },
+        {
+          "consumer": "scheduler",
+          "status": "unknown",
+          "reason": "missing telemetry"
+        }
+      ],
+      "scope": "declared consumers only; not a complete dependency oracle"
+    },
+    "stale": {
+      "decision": "unknown",
+      "checks": [
+        {
+          "consumer": "api",
+          "status": "unknown",
+          "reason": "identity, freshness or evidence invalid"
+        },
+        {
+          "consumer": "worker",
+          "status": "unknown",
+          "reason": "identity, freshness or evidence invalid"
+        },
+        {
+          "consumer": "scheduler",
+          "status": "unknown",
+          "reason": "identity, freshness or evidence invalid"
+        }
+      ],
+      "scope": "declared consumers only; not a complete dependency oracle"
+    },
+    "gate": {
+      "decision": "ready",
+      "checks": [
+        {
+          "consumer": "api",
+          "status": "ready",
+          "reason": "fresh target-generation authentication"
+        },
+        {
+          "consumer": "worker",
+          "status": "ready",
+          "reason": "fresh target-generation authentication"
+        },
+        {
+          "consumer": "scheduler",
+          "status": "ready",
+          "reason": "fresh target-generation authentication"
+        }
+      ],
+      "scope": "declared consumers only; not a complete dependency oracle"
+    },
+    "afterRevocation": [
+      {
+        "consumer": "api",
+        "generation": 2,
+        "authenticatedIdentity": "api",
+        "accepted": true,
+        "observedAt": 1793475856738
+      },
+      {
+        "consumer": "worker",
+        "generation": 2,
+        "authenticatedIdentity": "worker",
+        "accepted": true,
+        "observedAt": 1793475856738
+      },
+      {
+        "consumer": "scheduler",
+        "generation": 2,
+        "authenticatedIdentity": "scheduler",
+        "accepted": true,
+        "observedAt": 1793475856738
+      }
+    ],
+    "attempts": 9,
+    "rejected": 0
+  }
+}

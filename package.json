@@ -1,0 +1,14 @@
+{
+  "name": "1password-rotation-rehearsal",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Real loopback HTTP authentication and fictional credential generations; explicit consumer inventory, stale/missing telemetry abstention; no 1Password integration.",
+  "scripts": {
+    "test": "node --test",
+    "demo": "node cli.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
